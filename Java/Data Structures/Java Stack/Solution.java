@@ -28,21 +28,20 @@ class Solution {
         return deque.isEmpty();        
     }
 	
-	public static void main(String [] arg) {
-   
-		/* Create HashMap to match opening brackets with closing brackets */
+    public static void main(String [] arg) {
+	/* Create HashMap to match opening brackets with closing brackets */
+	
+	HashMap<Character,Character> map = new HashMap<>();
+	map.put('(',')');
+	map.put('{','}');
+	map.put('[',']');
         
-		HashMap<Character,Character> map = new HashMap<>();
-		map.put('(',')');
-		map.put('{','}');
-		map.put('[',']');
-        
-		Scanner scanner = new Scanner(System.in);
-    /* Test each expression for validity */
-		while (scanner.hasNext()) {
-			String exp = scanner.next();
-      System.out.println(isBraceBalanced(exp,map) ? "true" : "false");
-		}
-		scanner.close();
+	Scanner scanner = new Scanner(System.in);
+	/* Test each expression for validity */
+	while (scanner.hasNext()) {
+		String exp = scanner.next();
+      		System.out.println(isBraceBalanced(exp,map) ? "true" : "false");
+	}
+	scanner.close();
 	}
 }
