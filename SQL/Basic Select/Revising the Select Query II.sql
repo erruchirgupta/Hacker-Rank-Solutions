@@ -4,4 +4,4 @@
 
 -- ORACLE SQL SOLUTION
 
-select * from CITY where POPULATION > 100000 and COUNTRYCODE = 'USA';
+select NAME from CITY where POPULATION > 120000 and COUNTRYCODE = 'USA';
