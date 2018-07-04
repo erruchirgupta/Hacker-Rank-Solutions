@@ -2,6 +2,8 @@
 --     Github: https://github.com/erruchirgupta
 -- HackerRank: https://hackerrank.com/RuchirGupta
 
+-- ORACLE SQL SOLUTION
+
 SELECT * FROM (
 SELECT CITY, LENGTH(CITY) FROM STATION 
 ORDER BY LENGTH(CITY), CITY ) 
