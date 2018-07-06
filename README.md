@@ -1,9 +1,18 @@
+<p align="right">
+    <a href="https://www.facebook.com/erruchirgupta">
+        <img height=80 src="https://www.seeklogo.net/wp-content/uploads/2016/09/facebook-icon-preview-1.png">
+    </a>
+    <a href="https://www.linkedin.com/in/ruchir-gupta/">
+        <img height=85 src="https://www.shareicon.net/download/2017/06/30/888065_logo_512x512.png">
+    </a>
+</p>
 <p align="center">
     <a href="https://www.hackerrank.com/RuchirGupta">
         <img height=85 src="https://d3keuzeb2crhkn.cloudfront.net/hackerrank/assets/styleguide/logo_wordmark-f5c5eb61ab0a154c3ed9eda24d0b9e31.svg">
     </a>
-    <br>100+ efficient solutions to HackerRank problems
+    <br>This repository contains HackerRank problems solutions
 </p>
+
 
 * [Algorithms](#algorithms)
 * [Data Structures](#data-structures)
@@ -12,7 +21,7 @@
 
 Solutions are coded using Java 8
 
-SQL solutions are coded using MySQL
+SQL solutions are coded using ORACLE
 
 # Algorithms
 
