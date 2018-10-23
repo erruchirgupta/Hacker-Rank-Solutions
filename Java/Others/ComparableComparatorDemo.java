@@ -34,6 +34,11 @@ class Movie implements Comparable<Movie> {
 	public int getYear() {
 		return year;
 	}
+
+	@Override
+	public String toString() {
+		return this.getRating() + " " + this.getName() + " " + this.getYear();
+	}
 }
 
 public class ComparableComparatorDemo {
@@ -51,10 +56,7 @@ public class ComparableComparatorDemo {
   
         System.out.println("Movies after sorting year wise : ");
         System.out.println("---------------------------------");
-        for (Movie movie: list) 
-            System.out.println(movie.getRating() + " " + 
-                               movie.getName() + " " + 
-                               movie.getYear());
+        list.forEach(System.out::println);
         System.out.println("---------------------------------");
         
         Collections.sort(list, new Comparator<Movie>() {
@@ -70,10 +72,7 @@ public class ComparableComparatorDemo {
         
         System.out.println("Movies after sorting rating wise : ");
         System.out.println("---------------------------------");
-        for (Movie movie: list) 
-            System.out.println(movie.getRating() + " " + 
-                               movie.getName() + " " + 
-                               movie.getYear());
+        list.forEach(System.out::println);
         System.out.println("---------------------------------");
         
         Collections.sort(list, Comparator.comparing(
@@ -85,60 +84,42 @@ public class ComparableComparatorDemo {
         
         System.out.println("Movies after sorting rating wise in reverse : ");
         System.out.println("---------------------------------");
-        for (Movie movie: list) 
-            System.out.println(movie.getRating() + " " + 
-                               movie.getName() + " " + 
-                               movie.getYear());
+        list.forEach(System.out::println);
         System.out.println("---------------------------------");
         
         Collections.sort(list, Comparator.comparingDouble(Movie::getRating)); 
         
         System.out.println("Movies after sorting rating wise (shortHand): ");
         System.out.println("---------------------------------");
-        for (Movie movie: list) 
-            System.out.println(movie.getRating() + " " + 
-                               movie.getName() + " " + 
-                               movie.getYear());
+        list.forEach(System.out::println);
         System.out.println("---------------------------------");
        
         Collections.sort(list, Comparator.comparing(Movie::getName));
         
         System.out.println("Movies after sorting name wise : ");
         System.out.println("---------------------------------");
-        for (Movie movie: list) 
-            System.out.println(movie.getRating() + " " + 
-                               movie.getName() + " " + 
-                               movie.getYear());
+        list.forEach(System.out::println);
         System.out.println("---------------------------------");
         
         Collections.sort(list, Comparator.comparing(Movie::getName).reversed());
         
         System.out.println("Movies after sorting name wise in reverse : ");
         System.out.println("---------------------------------");
-        for (Movie movie: list) 
-            System.out.println(movie.getRating() + " " + 
-                               movie.getName() + " " + 
-                               movie.getYear());
+        list.forEach(System.out::println);
         System.out.println("---------------------------------");
         
         Collections.sort(list, Comparator.<Movie> naturalOrder());
         
         System.out.println("Movies after sorting in Natural Order (Year Wise) : ");
         System.out.println("---------------------------------");
-        for (Movie movie: list) 
-            System.out.println(movie.getRating() + " " + 
-                               movie.getName() + " " + 
-                               movie.getYear());
+        list.forEach(System.out::println);
         System.out.println("---------------------------------");
         
         Collections.sort(list, Comparator.<Movie> reverseOrder());
         
         System.out.println("Movies after sorting in Reverse Natural Order (Year Wise) : ");
         System.out.println("---------------------------------");
-        for (Movie movie: list) 
-            System.out.println(movie.getRating() + " " + 
-                               movie.getName() + " " + 
-                               movie.getYear());
+        list.forEach(System.out::println);
         System.out.println("---------------------------------");
         
         
@@ -155,10 +136,7 @@ public class ComparableComparatorDemo {
         
         System.out.println("Movies after sorting by Name, Rating, Year : ");
         System.out.println("---------------------------------");
-        for (Movie movie: list) 
-            System.out.println(movie.getRating() + " " + 
-                               movie.getName() + " " + 
-                               movie.getYear());
+        list.forEach(System.out::println);
         System.out.println("---------------------------------");
 	}
 }
